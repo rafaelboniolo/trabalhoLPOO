@@ -213,8 +213,8 @@ public class Login extends javax.swing.JFrame {
         
         this.initBar(jProgressBar1, true);
         this.initBar(this.jProgressBar1,this.TEMP_initHibernate());
-        //this.dispose();
-        //new Inicio().setVisible(true);
+        this.dispose();
+        new Inicio().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void tfSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSenhaActionPerformed

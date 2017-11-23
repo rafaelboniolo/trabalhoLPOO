@@ -570,7 +570,9 @@ public class Inicio extends javax.swing.JFrame {
     
     
     private void btPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPacienteActionPerformed
-        // TODO add your handling code here:
+        Paciente p = new Paciente();
+        this.jDesktopPane1.add(p);
+        p.setVisible(true);
     }//GEN-LAST:event_btPacienteActionPerformed
 
     private void panelFuncionarioMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelFuncionarioMouseMoved
