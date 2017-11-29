@@ -6,6 +6,10 @@
 package javaapplication10;
 
 import java.awt.Color;
+import javaapplication10.Bean.BeanEndereco;
+import javaapplication10.Bean.BeanPaciente;
+import javaapplication10.Bean.BeanResponsavel;
+import javax.swing.JDesktopPane;
 import javax.swing.JFormattedTextField;
 
 /**
@@ -17,9 +21,10 @@ public class Paciente extends javax.swing.JInternalFrame {
     /**
      * Creates new form Paciente
      */
-    public Paciente() {
+    JDesktopPane desktopPane;
+    public Paciente(JDesktopPane desktopPane) {
         initComponents();
-        
+        this.desktopPane = desktopPane;
     }
 
     /**
@@ -346,6 +351,11 @@ public class Paciente extends javax.swing.JInternalFrame {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/if_save_173091.png"))); // NOI18N
         jButton1.setText("Salvar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/if_draw-08_725558.png"))); // NOI18N
         jButton5.setText("Limpar");
@@ -400,9 +410,8 @@ public class Paciente extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -467,6 +476,47 @@ public class Paciente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_cbNItemStateChanged
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        this.limparCampos();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        
+        Responsavel r = new Responsavel();
+        this.desktopPane.add(r);
+        r.setVisible(true);
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        BeanPaciente bp = new BeanPaciente();
+        bp.setNome(this.tfNome.getText());
+        bp.setCpf(this.tfCPF.getText());
+        bp.setRg(this.tfRG.getText());
+        bp.setNascimento(this.dateNasc.getDate());
+        
+        BeanEndereco end = new BeanEndereco();
+        end.setCep(this.tfCep.getText());
+        end.setCidade(this.tfCidade.getText());
+        if(this.cbN.isSelected())
+            end.setN(null);
+        else
+            end.setN(this.tfN.getText());
+        end.setRua(this.tfRua.getText());
+        end.setUf(this.tfUF.getText());
+        
+        bp.setEndereco(end);
+        
+        // salvar bp.
+        
+        this.limparCampos();
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+    
+    private void limparCampos(){
         this.tfCPF.setText(null);
         this.tfCep.setText(null);
         this.tfCidade.setText(null);
@@ -481,17 +531,7 @@ public class Paciente extends javax.swing.JInternalFrame {
         this.tfN.setEnabled(true);
         this.tfNome.setFocusable(true);
         this.dateNasc.setDate(null);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        new Responsavel().setVisible(true);
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
-
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox cbN;

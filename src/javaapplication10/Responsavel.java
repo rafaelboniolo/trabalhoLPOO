@@ -5,6 +5,9 @@
  */
 package javaapplication10;
 
+import javaapplication10.Bean.BeanEndereco;
+import javaapplication10.Bean.BeanResponsavel;
+
 /**
  *
  * @author ALUNO
@@ -73,6 +76,22 @@ public class Responsavel extends javax.swing.JInternalFrame {
         }
         dateNasc = new com.toedter.calendar.JDateChooser();
         tfNome = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        tfTel = new javax.swing.JTextField();
+        try{ 
+            javax.swing.text.MaskFormatter cpf= new javax.swing.text.MaskFormatter("(##)####-####");
+            tfTel = new javax.swing.JFormattedTextField(cpf);
+        }
+        catch (Exception e){
+        }
+        tfCel = new javax.swing.JTextField();
+        try{ 
+            javax.swing.text.MaskFormatter cpf= new javax.swing.text.MaskFormatter("(##)#####-####");
+            tfCel = new javax.swing.JFormattedTextField(cpf);
+        }
+        catch (Exception e){
+        }
         jPanel7 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -152,7 +171,7 @@ public class Responsavel extends javax.swing.JInternalFrame {
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(tfUF, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,31 +208,45 @@ public class Responsavel extends javax.swing.JInternalFrame {
 
         jLabel5.setText("Nascimento:");
 
+        jLabel6.setText("Tel:");
+
+        jLabel7.setText("Cel:");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(18, 18, 18)
-                        .addComponent(dateNasc, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2)
                             .addComponent(jLabel4))
-                        .addGap(35, 35, 35)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(tfCPF, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tfRG, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(155, 155, 155)))))
-                .addContainerGap(28, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tfCPF, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                                    .addComponent(tfRG))
+                                .addGap(34, 34, 34)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tfTel))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tfCel)))
+                                .addContainerGap())
+                            .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
+                        .addComponent(dateNasc, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,11 +258,15 @@ public class Responsavel extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(tfCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(tfTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(tfRG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfRG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(tfCel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
@@ -243,22 +280,27 @@ public class Responsavel extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/if_save_173091.png"))); // NOI18N
         jButton1.setText("Salvar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/if_draw-08_725558.png"))); // NOI18N
         jButton5.setText("Limpar");
@@ -314,7 +356,7 @@ public class Responsavel extends javax.swing.JInternalFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addComponent(jLabel12)
                 .addGap(21, 21, 21))
         );
@@ -370,26 +412,55 @@ public class Responsavel extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_cbNActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        this.tfCPF.setText(null);
-        this.tfCep.setText(null);
-        this.tfCidade.setText(null);
-        this.tfN.setText(null);
-        this.tfNome.setText(null);
-        this.tfRG.setText(null);
-        
-        this.tfRua.setText(null);
-        this.tfUF.setText(null);
-        this.cbN.setSelected(false);
-        
-        this.tfN.setEnabled(true);
-        this.tfNome.setFocusable(true);
-        this.dateNasc.setDate(null);
+        this.limparCampos();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        BeanResponsavel br = new BeanResponsavel();
+        br.setNome(this.tfNome.getText());
+        br.setCpf(this.tfCPF.getText());
+        br.setCel(this.tfCel.getText());
+        br.setRg(this.tfRG.getText());
+        br.setNascimento(this.dateNasc.getDate());
+        br.setTel(this.tfTel.getText());
+        
+        BeanEndereco end = new BeanEndereco();
+        end.setCep(this.tfCep.getText());
+        end.setCidade(this.tfCidade.getText());
+        if(this.cbN.isSelected())
+            end.setN(null);
+        else
+            end.setN(this.tfN.getText());
+        end.setRua(this.tfRua.getText());
+        end.setUf(this.tfUF.getText());
+        
+        br.setEndereco(end);
+        
+        // salvar br
+        
+        this.limparCampos();
+        this.dispose();
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+    private void limparCampos(){
+
+        this.tfCPF.setText(null);
+        this.tfCep.setText(null);
+        this.tfCidade.setText(null);
+        this.tfN.setText(null);
+        this.tfNome.setText(null);
+        this.tfRG.setText(null);
+        this.tfRua.setText(null);
+        this.tfUF.setText(null);
+        this.cbN.setSelected(false);
+        this.tfN.setEnabled(true);
+        this.tfNome.setFocusable(true);
+        this.dateNasc.setDate(null);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox cbN;
@@ -405,6 +476,8 @@ public class Responsavel extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -413,12 +486,14 @@ public class Responsavel extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JTextField tfCPF;
+    private javax.swing.JTextField tfCel;
     private javax.swing.JTextField tfCep;
     private javax.swing.JTextField tfCidade;
     private javax.swing.JTextField tfN;
     private javax.swing.JTextField tfNome;
     private javax.swing.JTextField tfRG;
     private javax.swing.JTextField tfRua;
+    private javax.swing.JTextField tfTel;
     private javax.swing.JTextField tfUF;
     // End of variables declaration//GEN-END:variables
 }
