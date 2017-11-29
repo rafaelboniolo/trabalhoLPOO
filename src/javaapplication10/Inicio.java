@@ -11,6 +11,11 @@ import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.ImageIcon;
+import java.awt.Image;
+import java.awt.Graphics;
+import java.beans.PropertyVetoException;
+
 
 /**
  *
@@ -77,7 +82,14 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        ImageIcon icon = new ImageIcon(getClass().getResource("./icon/123.jpg"));
+        Image image = icon.getImage();
+        jDesktopPane1 = new javax.swing.JDesktopPane(){
+            public void paintComponent(Graphics g){
+                g.drawImage(image,0,0,getWidth(),getHeight(),this);
+
+            }
+        };
         jPanel2 = new javax.swing.JPanel();
         panelFuncionario = new javax.swing.JPanel();
         btPaciente = new javax.swing.JButton();
@@ -120,15 +132,15 @@ public class Inicio extends javax.swing.JFrame {
 
         jDesktopPane1.setLayout(new java.awt.CardLayout());
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jPanel2MouseEntered(evt);
             }
         });
 
-        panelFuncionario.setBackground(new java.awt.Color(153, 255, 255));
-        panelFuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        panelFuncionario.setBackground(new java.awt.Color(255, 255, 255));
+        panelFuncionario.setBorder(null);
         panelFuncionario.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 panelFuncionarioMouseDragged(evt);
@@ -159,6 +171,7 @@ public class Inicio extends javax.swing.JFrame {
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/Find_user_search.png"))); // NOI18N
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/heart (2).png"))); // NOI18N
 
         javax.swing.GroupLayout panelFuncionarioLayout = new javax.swing.GroupLayout(panelFuncionario);
@@ -172,7 +185,7 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(panelFuncionarioLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jLabel2)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         panelFuncionarioLayout.setVerticalGroup(
             panelFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,12 +228,17 @@ public class Inicio extends javax.swing.JFrame {
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel3.setBorder(null);
         jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/worker-loading-boxes.png"))); // NOI18N
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/223-32.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/warehouse(1).png"))); // NOI18N
 
@@ -309,7 +327,7 @@ public class Inicio extends javax.swing.JFrame {
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel6.setBorder(null);
 
         btLembrete.setBackground(new java.awt.Color(204, 204, 204));
         btLembrete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/sticky-note.png"))); // NOI18N
@@ -543,9 +561,9 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, Short.MAX_VALUE)
                         .addComponent(panelFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(65, 65, 65)
+                .addGap(71, 71, 71)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -592,7 +610,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(16, 16, 16))
         );
 
-        jDesktopPane1.add(jPanel2, "card2");
+        jDesktopPane1.add(jPanel2, "");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -670,6 +688,14 @@ public class Inicio extends javax.swing.JFrame {
         this.jDesktopPane1.add(a);
         a.setVisible(true);
     }//GEN-LAST:event_btHelpActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Estoque e  = new Estoque();
+        
+        
+        this.jDesktopPane1.add(e);
+        e.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
