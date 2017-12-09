@@ -19,6 +19,7 @@ import javax.swing.ImageIcon;
 import java.awt.Image;
 import java.awt.Graphics;
 import java.beans.PropertyVetoException;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import napkin.NapkinLookAndFeel;
@@ -389,6 +390,11 @@ public class Inicio extends javax.swing.JFrame {
 
         btUsuario.setBackground(new java.awt.Color(204, 204, 204));
         btUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/team (1).png"))); // NOI18N
+        btUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btUsuarioActionPerformed(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel9.setText("USUÁRIO");
@@ -663,9 +669,7 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btHelpActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Estoque e  = new Estoque();
-        
-        
+        Estoque e  = new Estoque(this.jDesktopPane1);
         this.jDesktopPane1.add(e);
         e.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -685,6 +689,11 @@ public class Inicio extends javax.swing.JFrame {
     private void btEstatisticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEstatisticaActionPerformed
         
     }//GEN-LAST:event_btEstatisticaActionPerformed
+
+    private void btUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUsuarioActionPerformed
+        new Usuario().setVisible(true);
+        
+    }//GEN-LAST:event_btUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

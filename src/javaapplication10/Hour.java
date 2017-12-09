@@ -37,7 +37,7 @@ public class Hour {
                         Hora.setText(String.valueOf(d.getHours())+":"+d.getMinutes()+":"+d.getSeconds());
                     
                     try {
-                        Thread.sleep(999);
+                        Thread.sleep(1);
                     } catch (InterruptedException ex) {
                         Logger.getLogger(Hour.class.getName()).log(Level.SEVERE, null, ex);
                     }

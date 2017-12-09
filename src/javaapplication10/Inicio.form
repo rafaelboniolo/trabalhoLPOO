@@ -632,6 +632,9 @@
                           <Image iconType="3" name="/javaapplication10/icon/team (1).png"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btUsuarioActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel9">
                       <Properties>
