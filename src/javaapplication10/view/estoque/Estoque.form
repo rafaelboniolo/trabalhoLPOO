@@ -151,7 +151,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" pref="400" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="396" max="32767" attributes="0"/>
                       <Component id="jScrollPane2" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -236,7 +236,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="10" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -255,7 +255,7 @@
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/javaapplication10/icon/if_Erase_105247.png"/>
+                  <Image iconType="3" name="/javaapplication10/resources/icon/if_Erase_105247.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
@@ -263,7 +263,7 @@
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/javaapplication10/icon/accepted_yes_correct_good_agree-32.png"/>
+                  <Image iconType="3" name="/javaapplication10/resources/icon/accepted_yes_correct_good_agree-32.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Efetuar"/>
               </Properties>
@@ -276,7 +276,7 @@
         <Component class="javax.swing.JLabel" name="jlPesquisa">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/javaapplication10/icon/97_-_Find_Product-24.png"/>
+              <Image iconType="3" name="/javaapplication10/resources/icon/97_-_Find_Product-24.png"/>
             </Property>
           </Properties>
         </Component>
@@ -285,7 +285,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/javaapplication10/icon/99_-_Verified_Cart_Items-24.png"/>
+              <Image iconType="3" name="/javaapplication10/resources/icon/99_-_Verified_Cart_Items-24.png"/>
             </Property>
           </Properties>
         </Component>
