@@ -141,7 +141,7 @@
                               <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="9" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -152,7 +152,7 @@
                 <Component class="javax.swing.JButton" name="jButton1">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/javaapplication10/icon/check.png"/>
+                      <Image iconType="3" name="/javaapplication10/resources/icon/check.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Validar"/>
                   </Properties>
@@ -263,7 +263,7 @@
                 <Component class="javax.swing.JButton" name="jButton2">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/javaapplication10/icon/save.png"/>
+                      <Image iconType="3" name="/javaapplication10/resources/icon/save.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Salvar"/>
                   </Properties>

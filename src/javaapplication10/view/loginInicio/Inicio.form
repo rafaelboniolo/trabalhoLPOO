@@ -49,10 +49,6 @@
       </Layout>
       <SubComponents>
         <Container class="javax.swing.JDesktopPane" name="jDesktopPane1">
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JDesktopPane(){&#xa;    public void paintComponent(Graphics g){&#xa;        g.drawImage(image,0,0,getWidth(),getHeight(),this);&#xa;&#xa;    }&#xa;}"/>
-            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="ImageIcon icon = new ImageIcon(getClass().getResource(&quot;./icon/123.jpg&quot;));&#xa;Image image = icon.getImage();"/>
-          </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
           <SubComponents>
@@ -186,7 +182,7 @@
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/javaapplication10/icon/heart (2).png"/>
+                          <Image iconType="3" name="/javaapplication10/resources/icon/heart (2).png"/>
                         </Property>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Cursor em Forma de M&#xe3;o"/>
@@ -254,7 +250,7 @@
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/javaapplication10/icon/employees.png"/>
+                          <Image iconType="3" name="/javaapplication10/resources/icon/employees.png"/>
                         </Property>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Cursor em Forma de M&#xe3;o"/>
@@ -321,7 +317,7 @@
                     <Component class="javax.swing.JButton" name="jButton1">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/javaapplication10/icon/worker-loading-boxes.png"/>
+                          <Image iconType="3" name="/javaapplication10/resources/icon/worker-loading-boxes.png"/>
                         </Property>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Cursor em Forma de M&#xe3;o"/>
@@ -382,7 +378,7 @@
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/javaapplication10/icon/increasing-stocks-graphic.png"/>
+                          <Image iconType="3" name="/javaapplication10/resources/icon/increasing-stocks-graphic.png"/>
                         </Property>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Cursor em Forma de M&#xe3;o"/>
@@ -445,7 +441,7 @@
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/javaapplication10/icon/give-money.png"/>
+                          <Image iconType="3" name="/javaapplication10/resources/icon/give-money.png"/>
                         </Property>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Cursor em Forma de M&#xe3;o"/>
@@ -504,7 +500,7 @@
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/javaapplication10/icon/sticky-note.png"/>
+                          <Image iconType="3" name="/javaapplication10/resources/icon/sticky-note.png"/>
                         </Property>
                         <Property name="autoscrolls" type="boolean" value="true"/>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -567,7 +563,7 @@
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/javaapplication10/icon/logout-1-128.png"/>
+                          <Image iconType="3" name="/javaapplication10/resources/icon/logout-1-128.png"/>
                         </Property>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Cursor em Forma de M&#xe3;o"/>
@@ -632,7 +628,7 @@
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/javaapplication10/icon/team (1).png"/>
+                          <Image iconType="3" name="/javaapplication10/resources/icon/team (1).png"/>
                         </Property>
                       </Properties>
                       <Events>
@@ -702,7 +698,7 @@
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/javaapplication10/icon/if_task-manager_help_67345.png"/>
+                          <Image iconType="3" name="/javaapplication10/resources/icon/if_task-manager_help_67345.png"/>
                         </Property>
                       </Properties>
                       <Events>
@@ -824,7 +820,7 @@
                     <Component class="javax.swing.JLabel" name="imgMessage">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/javaapplication10/icon/167-48.png"/>
+                          <Image iconType="3" name="/javaapplication10/resources/icon/167-48.png"/>
                         </Property>
                       </Properties>
                       <Events>

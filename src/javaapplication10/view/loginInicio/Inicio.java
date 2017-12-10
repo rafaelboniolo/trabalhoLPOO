@@ -5,32 +5,16 @@
  */
 package javaapplication10.view.loginInicio;
 
-import javaapplication10.view.loginInicio.Login;
 import javaapplication10.view.report.Report;
 import javaapplication10.view.paciente.Paciente;
 import javaapplication10.view.usuario.Usuario;
 import javaapplication10.view.estoque.Estoque;
 import javaapplication10.view.funcionario.Funcionario;
-import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
-import com.jgoodies.looks.plastic.PlasticLookAndFeel;
-import com.jgoodies.looks.plastic.PlasticTheme;
-import com.jgoodies.looks.plastic.PlasticXPLookAndFeel;
-import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.ImageIcon;
-import java.awt.Image;
-import java.awt.Graphics;
-import java.beans.PropertyVetoException;
 import javaapplication10.Hour;
 import javaapplication10.view.lembrete.Lembretes;
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-import napkin.NapkinLookAndFeel;
 
 
 /**
@@ -53,6 +37,7 @@ public class Inicio extends javax.swing.JFrame {
         lembrete(this.imgMessage,this.STATUS_MESSAGE);
         this.showUser(t);
         this.setLocationRelativeTo(null);
+        
     }
     
     private void lembrete(JLabel imgMessage, boolean status){
@@ -98,14 +83,7 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        ImageIcon icon = new ImageIcon(getClass().getResource("./icon/123.jpg"));
-        Image image = icon.getImage();
-        jDesktopPane1 = new javax.swing.JDesktopPane(){
-            public void paintComponent(Graphics g){
-                g.drawImage(image,0,0,getWidth(),getHeight(),this);
-
-            }
-        };
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanelArea = new javax.swing.JPanel();
         panelFuncionario = new javax.swing.JPanel();
         btPaciente = new javax.swing.JButton();
@@ -169,7 +147,7 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         btPaciente.setBackground(new java.awt.Color(204, 204, 204));
-        btPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/heart (2).png"))); // NOI18N
+        btPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/resources/icon/heart (2).png"))); // NOI18N
         btPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -208,7 +186,7 @@ public class Inicio extends javax.swing.JFrame {
         lbFuncionario.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
         btFuncionario.setBackground(new java.awt.Color(204, 204, 204));
-        btFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/employees.png"))); // NOI18N
+        btFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/resources/icon/employees.png"))); // NOI18N
         btFuncionario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,7 +219,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
         jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/worker-loading-boxes.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/resources/icon/worker-loading-boxes.png"))); // NOI18N
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,7 +252,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
         btEstatistica.setBackground(new java.awt.Color(204, 204, 204));
-        btEstatistica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/increasing-stocks-graphic.png"))); // NOI18N
+        btEstatistica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/resources/icon/increasing-stocks-graphic.png"))); // NOI18N
         btEstatistica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btEstatistica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,7 +284,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
         btPagamento.setBackground(new java.awt.Color(204, 204, 204));
-        btPagamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/give-money.png"))); // NOI18N
+        btPagamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/resources/icon/give-money.png"))); // NOI18N
         btPagamento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -335,7 +313,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
         btLembrete.setBackground(new java.awt.Color(204, 204, 204));
-        btLembrete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/sticky-note.png"))); // NOI18N
+        btLembrete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/resources/icon/sticky-note.png"))); // NOI18N
         btLembrete.setAutoscrolls(true);
         btLembrete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btLembrete.addActionListener(new java.awt.event.ActionListener() {
@@ -369,7 +347,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
         btLogout.setBackground(new java.awt.Color(204, 204, 204));
-        btLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/logout-1-128.png"))); // NOI18N
+        btLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/resources/icon/logout-1-128.png"))); // NOI18N
         btLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -403,7 +381,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btUsuario.setBackground(new java.awt.Color(204, 204, 204));
-        btUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/team (1).png"))); // NOI18N
+        btUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/resources/icon/team (1).png"))); // NOI18N
         btUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btUsuarioActionPerformed(evt);
@@ -439,7 +417,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel10.setText("REPORTAR");
 
         btHelp.setBackground(new java.awt.Color(204, 204, 204));
-        btHelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/if_task-manager_help_67345.png"))); // NOI18N
+        btHelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/resources/icon/if_task-manager_help_67345.png"))); // NOI18N
         btHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btHelpActionPerformed(evt);
@@ -507,7 +485,7 @@ public class Inicio extends javax.swing.JFrame {
             .addGap(0, 153, Short.MAX_VALUE)
         );
 
-        imgMessage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/167-48.png"))); // NOI18N
+        imgMessage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/resources/icon/167-48.png"))); // NOI18N
         imgMessage.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 imgMessageMouseMoved(evt);
@@ -588,7 +566,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addGroup(jPanelAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(panelFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(panelFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                                 .addComponent(lbFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanelAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -722,12 +700,7 @@ public class Inicio extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try{
-            UIManager.setLookAndFeel(new PlasticXPLookAndFeel());
-        }
-        catch(UnsupportedLookAndFeelException e){
-            e.printStackTrace();
-        }
+      
          
         //</editor-fold>
 

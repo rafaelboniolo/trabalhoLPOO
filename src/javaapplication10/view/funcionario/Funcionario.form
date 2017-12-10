@@ -456,7 +456,7 @@
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/javaapplication10/icon/if_save_173091.png"/>
+                  <Image iconType="3" name="/javaapplication10/resources/icon/if_save_173091.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
@@ -467,7 +467,7 @@
             <Component class="javax.swing.JButton" name="jButton5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/javaapplication10/icon/if_draw-08_725558.png"/>
+                  <Image iconType="3" name="/javaapplication10/resources/icon/if_draw-08_725558.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
@@ -478,7 +478,7 @@
             <Component class="javax.swing.JButton" name="jButton4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/javaapplication10/icon/if_Erase_105247.png"/>
+                  <Image iconType="3" name="/javaapplication10/resources/icon/if_Erase_105247.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
@@ -489,7 +489,7 @@
             <Component class="javax.swing.JButton" name="btBuscar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/javaapplication10/icon/Find_user_search.png"/>
+                  <Image iconType="3" name="/javaapplication10/resources/icon/Find_user_search.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Buscar"/>
               </Properties>
