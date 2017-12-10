@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication10;
+package javaapplication10.view.loginInicio;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import javaapplication10.Hour;
 import javax.swing.ImageIcon;
 import javax.swing.JProgressBar;
 

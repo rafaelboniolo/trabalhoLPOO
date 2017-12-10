@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication10;
+package javaapplication10.view.paciente;
 
+import javaapplication10.view.paciente.BuscarPaciente;
 import java.awt.Color;
 import javaapplication10.Bean.BeanEndereco;
 import javaapplication10.Bean.BeanPaciente;
 import javaapplication10.Bean.BeanResponsavel;
+import javaapplication10.view.responsavel.Responsavel;
 import javax.swing.JDesktopPane;
 import javax.swing.JFormattedTextField;
 /**

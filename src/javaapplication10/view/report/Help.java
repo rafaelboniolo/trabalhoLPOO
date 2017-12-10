@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication10;
+package javaapplication10.view.report;
 
+import javaapplication10.view.report.Report;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,12 +14,12 @@ import java.util.logging.Logger;
  *
  * @author Boniolo
  */
-public class Help1 extends javax.swing.JInternalFrame {
+public class Help extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Help1
      */
-    public Help1() {
+    public Help() {
         initComponents();
     }
 

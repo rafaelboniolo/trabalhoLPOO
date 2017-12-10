@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication10;
+package javaapplication10.view.responsavel;
 
 import javaapplication10.Bean.BeanEndereco;
 import javaapplication10.Bean.BeanResponsavel;

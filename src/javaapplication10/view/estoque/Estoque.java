@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-package javaapplication10;
+package javaapplication10.view.estoque;
 
+import javaapplication10.view.estoque.AddProdutos;
 import java.awt.Color;
 import javax.swing.Icon;
 import javax.swing.JDesktopPane;

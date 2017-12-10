@@ -3,8 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication10;
+package javaapplication10.view.loginInicio;
 
+import javaapplication10.view.loginInicio.Login;
+import javaapplication10.view.report.Report;
+import javaapplication10.view.paciente.Paciente;
+import javaapplication10.view.usuario.Usuario;
+import javaapplication10.view.estoque.Estoque;
+import javaapplication10.view.funcionario.Funcionario;
 import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
 import com.jgoodies.looks.plastic.PlasticLookAndFeel;
 import com.jgoodies.looks.plastic.PlasticTheme;
@@ -19,6 +25,8 @@ import javax.swing.ImageIcon;
 import java.awt.Image;
 import java.awt.Graphics;
 import java.beans.PropertyVetoException;
+import javaapplication10.Hour;
+import javaapplication10.view.lembrete.Lembretes;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -44,6 +52,7 @@ public class Inicio extends javax.swing.JFrame {
         new Hour().initHour(this.Hora);
         lembrete(this.imgMessage,this.STATUS_MESSAGE);
         this.showUser(t);
+        this.setLocationRelativeTo(null);
     }
     
     private void lembrete(JLabel imgMessage, boolean status){
@@ -201,6 +210,11 @@ public class Inicio extends javax.swing.JFrame {
         btFuncionario.setBackground(new java.awt.Color(204, 204, 204));
         btFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/employees.png"))); // NOI18N
         btFuncionario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btFuncionarioActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel3.setText("FUNCIONÁRIO");
@@ -422,7 +436,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel10.setText("HELP");
+        jLabel10.setText("REPORTAR");
 
         btHelp.setBackground(new java.awt.Color(204, 204, 204));
         btHelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication10/icon/if_task-manager_help_67345.png"))); // NOI18N
@@ -438,7 +452,7 @@ public class Inicio extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btHelp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel10)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -574,7 +588,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addGroup(jPanelAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(panelFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(panelFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
                                 .addComponent(lbFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanelAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -663,9 +677,9 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_imgMessageMouseMoved
 
     private void btHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btHelpActionPerformed
-        Help1 a = new Help1();
-        this.jDesktopPane1.add(a);
-        a.setVisible(true);
+        Report r = new Report();
+        r.setVisible(true);
+        
     }//GEN-LAST:event_btHelpActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -675,14 +689,12 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btLembreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLembreteActionPerformed
-        Lembrete l = new Lembrete();
-        this.jDesktopPane1.add(l);
+        Lembretes l = new Lembretes();
         l.setVisible(true);
     }//GEN-LAST:event_btLembreteActionPerformed
 
     private void imgMessageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgMessageMouseClicked
-        Lembrete l = new Lembrete();
-        this.jDesktopPane1.add(l);
+        Lembretes l = new Lembretes();
         l.setVisible(true);
     }//GEN-LAST:event_imgMessageMouseClicked
 
@@ -694,6 +706,12 @@ public class Inicio extends javax.swing.JFrame {
         new Usuario().setVisible(true);
         
     }//GEN-LAST:event_btUsuarioActionPerformed
+
+    private void btFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFuncionarioActionPerformed
+        Funcionario f = new Funcionario(jDesktopPane1);
+        jDesktopPane1.add(f);
+        f.setVisible(true);
+    }//GEN-LAST:event_btFuncionarioActionPerformed
 
     /**
      * @param args the command line arguments
