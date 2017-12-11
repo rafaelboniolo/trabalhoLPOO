@@ -19,7 +19,9 @@ public class Estoque extends javax.swing.JInternalFrame {
     JDesktopPane jdesktopPane;
     /** Creates new form Estoque */
     public Estoque(JDesktopPane jdesktopPane)  {
+        this.setResizable(false);
         initComponents();
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.jdesktopPane = jdesktopPane;
         
     }

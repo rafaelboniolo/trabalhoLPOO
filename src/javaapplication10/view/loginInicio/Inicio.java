@@ -30,7 +30,9 @@ public class Inicio extends javax.swing.JFrame {
     String t = "Boniolo" ;
     
     public Inicio() {
+        setResizable(false);
         initComponents();
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         new Hour().initHour(this.Hora);

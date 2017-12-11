@@ -15,7 +15,9 @@ public class BuscarPaciente extends javax.swing.JInternalFrame {
      * Creates new form BuscarPaciente
      */
     public BuscarPaciente() {
+        this.setResizable(false);
         initComponents();
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
     }
 
     /**

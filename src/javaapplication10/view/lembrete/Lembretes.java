@@ -15,7 +15,9 @@ public class Lembretes extends javax.swing.JFrame {
      * Creates new form Lembretes
      */
     public Lembretes() {
+        this.setResizable(false);
         initComponents();
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
 
     }

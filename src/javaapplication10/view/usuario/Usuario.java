@@ -15,7 +15,9 @@ public class Usuario extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public Usuario() {
+        this.setResizable(false);
         initComponents();
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.tfNewSenha.disable();
         this.tfNewSenha2.disable();

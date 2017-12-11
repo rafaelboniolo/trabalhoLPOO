@@ -21,9 +21,13 @@ public class Login extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public Login() {
+        setResizable(false);
         initComponents();
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         new Hour().initHour(this.Hora);
+       
+        
         //new Hour().initDate(this.Data);
         //this.jProgressBar1.setVisible(false);
         //this.loading.setVisible(false);

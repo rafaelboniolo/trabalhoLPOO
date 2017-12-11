@@ -17,7 +17,9 @@ public class Report extends javax.swing.JFrame {
 
     /** Creates new form Help */
     public Report() {
+        this.setResizable(false);
         initComponents();
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.jTextArea1.setFocusable(true);
         this.setLocationRelativeTo(null);
         this.spAcontecimentos.setModel( new SpinnerNumberModel(1,1,9,1));
