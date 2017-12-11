@@ -8,6 +8,7 @@ package javaapplication10.view.estoque;
 
 import javaapplication10.view.estoque.AddProdutos;
 import java.awt.Color;
+import javaapplication10.view.pagamento.pagamento;
 import javax.swing.Icon;
 import javax.swing.JDesktopPane;
 
@@ -266,7 +267,8 @@ public class Estoque extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        new pagamento().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
